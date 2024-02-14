@@ -1,8 +1,10 @@
-This is a project that I completed as the capstone project for [Google Advanced Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-advanced-data-analytics)
+This is research was completed as the capstone project for [Google Advanced Data Analytics Professional Certificate](https://www.coursera.org/professional-certificates/google-advanced-data-analytics)
 
 ## Project overview
 
-This is a project for determining factors that drive employee departure and building a model that will predict if an employee will quit the company.
+This is a project for:
+* determining factors that drive employee departure
+* building a model that will predict if an employee will quit the company
 
 ### Business context
 
@@ -14,7 +16,8 @@ The aim is to build the most effective model to predict employee departure, expl
 
 <details>
 <summary>Data</summary>
-The dataset contains 14,999 rows – each row is a different employee’s self-reported information
+
+The [dataset](HR_capstone_dataset.csv) contains 14,999 rows – each row is a different employee’s self-reported information
 
 Variable  |Description |
 -----|-----|
@@ -32,38 +35,39 @@ salary|The employee's salary range (low / medium / high)
 
 
 ### Steps
-#### EDA
-- Data Cleaning: Check NaNs, duplicates, outliers, renaming
-- Data exploration: pairplots, histograms, boxplots, correlation matrix
+#### 1 .EDA
+First, I performed data cleaning: checked the data for NaNs, duplicates, and outliers. For style uniformity, I renamed some columns. 
 
-#### Model building
-Compared decision tree and random forest
+Then, I did some data exploration trying to establish relationship between variables. I built scatterplots, histograms, boxplots, and, finally, a correlation matrix.
 
-#### Model evaluation
-Metrics on test set, winner on validation set (cf `model_res_comparison.csv`)
+As a part of data preparation, I removed duplicates and encoded categorical variables (salary and department).
 
-TODO: precision matrix
+#### 2. Model building
+Using grid search, I fitted a decision tree model and a random forest model, using roc_auc metric for refitting.
+I then compared the metrics on a test set for the two best estimators. Decision tree won by a very tiny margin (cf the [result table](model_res_comparison.csv)), so I proceeded to test it on a validation set.
 
-TODO feature importance
+#### 3. Model evaluation
 
-#### Formulating recommendations
+Metrics for the chosen model on the validation set are as follows:
 
-Since the most important feature is the satisfaction level, it would be beneficial to look into the problems indicated in the responses. Maybe this feature can be divided into multiple more precise ones, or we can build a model without it (since it does not indicate a root cause for (dis)satisfaction
-
-Also, it it very important to address the issue of overworking. Firstly, consider taking the load off the employees who work more that 250 or even 200 hours, especially if they have more than 5 projects.
-
-Consider implementing changes to the company policy:
-
-fix the maximum number of projects that an employee can work on (4-5)
-do not require employees to take longer hours or introduce a fair overtime policy
-change the company's promotion policy so that a promotion is more attainable
-Initiate an open discussion about these changes with the employees, explain the changes to be implemented and take into account to their opinions
+precision |recall|F1|accuracy|AUC
+-----------|-----|-----|-----|-----
+0.97| 0.91      | 0.94      | 0.98      |0.95
 
 
-### Results
+![CM](illustrations/confusion_matrix.png)
 
-precision                     0.973262
-recall                        0.914573
-F1                            0.943005
-accuracy                      0.981651
-AUC                           0.954786
+The model identified these features as the most important ones.
+![CM](illustrations/feature_importances.png)
+
+**Disclaimer:** since satisfaction level is a value that does not indicate a root cause for (dis)satisfaction, so I'm also planning to perform an analysis without it.
+
+#### 4. Formulating recommendations
+
+The conclusion I drew from the analysis is that it is very important to address the issue of overworking. Since both the number of projects and average monthly hours contribute to employee departure, the company needs measures to cap both.
+
+It was also very clear at the EDA stage that, overall, people tend to work longer hours than what is considered standard. 
+
+Another thing that came up during this stage is an extremely low rate of promotions in the company.
+
+You can see the detailed list of my recommendations in the last section of the [notebook](Project.ipynb).
