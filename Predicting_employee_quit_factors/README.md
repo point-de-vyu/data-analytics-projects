@@ -36,11 +36,22 @@ salary|The employee's salary range (low / medium / high)
 
 ### Steps
 #### 1 .EDA
-First, I performed data cleaning: checked the data for NaNs, duplicates, and outliers. For style uniformity, I renamed some columns. 
+First, I performed data preparation: dropped duplicated rows, encoded categorical variables (salary and department).
 
-Then, I did some data exploration trying to establish relationship between variables. I built scatterplots, histograms, boxplots, and, finally, a correlation matrix.
+Through data exploration, I identified two clusters of people who left the job.: 
+*  <details><summary>Overworking employees</summary>
+    Those who worked 240–300+ hours per month (mean monthly 200), participated in many projects and had a high evaluation score (> 0.8). These employees often have a critically low satisfaction score (<0.15). </details>
+* <details><summary>Uninvolved employees</summary>
+   A group of employees who were engaged only in minimal number of projects (2) and had a low evaluation score (<0.6), regular working hours (<160) a low satisfaction level (<0.5).</details>
 
-As a part of data preparation, I removed duplicates and encoded categorical variables (salary and department).
+<details>
+<summary>Illustrative Plot</summary>
+
+![CM](illustrations/clusters.png)
+</details>
+
+Further analysis revealed that the salary range does not seem to correlate with the number of projects. A pairplot examination revealed that a very low percentage of employees received promotions in the past 5 years. These findings may indicate a potential cause for the low level satisfaction and subsequent resignation. 
+
 
 #### 2. Model building
 Using grid search, I fitted a decision tree model and a random forest model, using roc_auc metric for refitting.
