@@ -60,11 +60,13 @@ I then compared the metrics on a test set for the two best estimators. Decision 
 #### 3. Model evaluation
 
 Metrics for the chosen model on the validation set are as follows:
+<div align="center">
 
 precision |recall|F1|accuracy|AUC
 -----------|-----|-----|-----|-----
 0.97| 0.91      | 0.94      | 0.98      |0.95
 
+</div>
 <p align="center">
 <img src=illustrations/confusion_matrix.png>
 </p>
