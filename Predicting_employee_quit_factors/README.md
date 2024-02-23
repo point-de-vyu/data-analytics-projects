@@ -65,12 +65,13 @@ precision |recall|F1|accuracy|AUC
 -----------|-----|-----|-----|-----
 0.97| 0.91      | 0.94      | 0.98      |0.95
 
-
-![CM](illustrations/confusion_matrix.png)
-
+<p align="center">
+<img src=illustrations/confusion_matrix.png>
+</p>
 The model identified these features as the most important ones.
-![CM](illustrations/feature_importances.png)
-
+<p align="center">
+<img src=illustrations/feature_i.png>
+</p>
 **Disclaimer:** since satisfaction level is a value that does not indicate a root cause for (dis)satisfaction, so I'm also planning to perform an analysis without it.
 
 #### 4. Formulating recommendations
