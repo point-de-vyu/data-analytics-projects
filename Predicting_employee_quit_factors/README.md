@@ -38,11 +38,11 @@ salary|The employee's salary range (low / medium / high)
 #### 1 .EDA
 First, I performed data preparation: dropped duplicated rows, encoded categorical variables (salary and department).
 
-Through data exploration, I identified two clusters of people who left the job.: 
+Through data exploration, I identified two clusters of people who left the job: 
 *  <details><summary>Overworking employees</summary>
-    Those who worked 240–300+ hours per month (mean monthly 200), participated in many projects and had a high evaluation score (> 0.8). These employees often have a critically low satisfaction score (<0.15). </details>
+    Those who worked 240–300+ hours per month (with monthly mean around 200), participated in many projects and had a high evaluation score (> 0.8). These employees often have a critically low satisfaction score (<0.15). </details>
 * <details><summary>Uninvolved employees</summary>
-   A group of employees who were engaged only in minimal number of projects (2) and had a low evaluation score (<0.6), regular working hours (<160) a low satisfaction level (<0.5).</details>
+   A group of employees who were engaged only in a minimal number of projects (2) and had a low evaluation score (<0.6), smaller than mean working hours (<160), and a low satisfaction level (<0.5).</details>
 
 <details>
 <summary>Illustrative Plot</summary>
@@ -50,11 +50,15 @@ Through data exploration, I identified two clusters of people who left the job.:
 ![CM](illustrations/clusters.png)
 </details>
 
-Further analysis revealed that the salary range does not seem to correlate with the number of projects. A pairplot examination revealed that a very low percentage of employees received promotions in the past 5 years. These findings may indicate a potential cause for the low level satisfaction and subsequent resignation. 
+Further analysis revealed that the salary range does not seem to correlate with the number of projects.
+
+Also, a very low percentage of employees received promotions in the past 5 years. 
+
+These findings may indicate a potential cause for the low satisfaction levels and subsequent resignation. 
 
 
 #### 2. Model building
-Using grid search, I fitted a decision tree model and a random forest model, using roc_auc metric for refitting.
+Using grid search, I fitted a decision tree model and a random forest model, with roc_auc metric for refitting.
 I then compared the metrics on a test set for the two best estimators. Decision tree won by a very tiny margin (cf the [result table](model_res_comparison.csv)), so I proceeded to test it on a validation set.
 
 #### 3. Model evaluation
@@ -74,6 +78,7 @@ The model identified these features as the most important ones.
 <p align="center">
 <img src=illustrations/feature_i.png>
 </p>
+
 **Disclaimer:** since satisfaction level is a value that does not indicate a root cause for (dis)satisfaction, so I'm also planning to perform an analysis without it.
 
 #### 4. Formulating recommendations
