@@ -36,29 +36,48 @@ salary|The employee's salary range (low / medium / high)
 
 ### Steps
 #### 1 .EDA
-First, I performed data cleaning: checked the data for NaNs, duplicates, and outliers. For style uniformity, I renamed some columns. 
+First, I performed data preparation: dropped duplicated rows, encoded categorical variables (salary and department).
 
-Then, I did some data exploration trying to establish relationship between variables. I built scatterplots, histograms, boxplots, and, finally, a correlation matrix.
+Through data exploration, I identified two clusters of people who left the job: 
+*  <details><summary>Overworking employees</summary>
+    Those who worked 240–300+ hours per month (with monthly mean around 200), participated in many projects and had a high evaluation score (> 0.8). These employees often have a critically low satisfaction score (<0.15). </details>
+* <details><summary>Uninvolved employees</summary>
+   A group of employees who were engaged only in a minimal number of projects (2) and had a low evaluation score (<0.6), smaller than mean working hours (<160), and a low satisfaction level (<0.5).</details>
 
-As a part of data preparation, I removed duplicates and encoded categorical variables (salary and department).
+<details>
+<summary>Illustrative Plot</summary>
+
+![CM](illustrations/clusters.png)
+</details>
+
+Further analysis revealed that the salary range does not seem to correlate with the number of projects.
+
+Also, a very low percentage of employees received promotions in the past 5 years. 
+
+These findings may indicate a potential cause for the low satisfaction levels and subsequent resignation. 
+
 
 #### 2. Model building
-Using grid search, I fitted a decision tree model and a random forest model, using roc_auc metric for refitting.
+Using grid search, I fitted a decision tree model and a random forest model, with roc_auc metric for refitting.
 I then compared the metrics on a test set for the two best estimators. Decision tree won by a very tiny margin (cf the [result table](model_res_comparison.csv)), so I proceeded to test it on a validation set.
 
 #### 3. Model evaluation
 
 Metrics for the chosen model on the validation set are as follows:
+<div align="center">
 
 precision |recall|F1|accuracy|AUC
 -----------|-----|-----|-----|-----
 0.97| 0.91      | 0.94      | 0.98      |0.95
 
-
-![CM](illustrations/confusion_matrix.png)
-
+</div>
+<p align="center">
+<img src=illustrations/confusion_matrix.png>
+</p>
 The model identified these features as the most important ones.
-![CM](illustrations/feature_importances.png)
+<p align="center">
+<img src=illustrations/feature_i.png>
+</p>
 
 **Disclaimer:** since satisfaction level is a value that does not indicate a root cause for (dis)satisfaction, so I'm also planning to perform an analysis without it.
 
