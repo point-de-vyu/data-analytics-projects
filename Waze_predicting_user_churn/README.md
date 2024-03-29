@@ -153,6 +153,17 @@ churned | 0.40      | 0.11   | 0.19 |
 
 Again, the metrics show that this model is bad at predicting user churn.
 
+### 5. Survival Random Forest
+
+Another approach is to train a Survival Tree to predict risk, in our case, risk of churning.
+The model performed with the following metric values:
+
+label | precision | recall | F1   | accuracy 
+-----|-----------|--------|------|-----|
+retained | 0.84      | 0.96   | 0.89 | 
+churned | 0.37      | 0.12   | 0.18 |
+| |           |        |      | 0.81
+
 ## Conclusions so far
 
 The results are unsatisfactory, none of the models is good at predicting users who are likely to churn. 
