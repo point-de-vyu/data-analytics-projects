@@ -42,6 +42,8 @@ Using EDA practices and categorization models to understand who the users who ch
 
 [Google Advanced Data Analytics Professional Certificate](https://coursera.org/share/9da4e8e4a88ae4283ab6baea83d094be)
 
+[Interactive SQL Simulator Course](https://stepik.org/cert/2249862?lang=en)
+
 ### **My other projects**
 
 * [Tableau vizzes](https://public.tableau.com/app/profile/anastasia.vyu/vizzes), including interactive maps and various charts
