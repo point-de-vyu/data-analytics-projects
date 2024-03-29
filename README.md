@@ -1,6 +1,7 @@
 ## Data Science Portfolio
 ### Anastasia Vyunova
 * **email**: anastasia.vyu@gmail.com
+* **Telegram** @anastasia_vyu
 * **LinkedIn**: [linkedin.com/anastasia-vyunova](https://www.linkedin.com/in/anastasia-vyunova-7bb8aa234/)
 
 
@@ -13,7 +14,7 @@
 
 ### [Predicting employee quit factors](https://github.com/point-de-vyu/data-analytics-projects/tree/main/Predicting_employee_quit_factors)
 
-A company's senior leadership team is concerned about high rate of turnover among their employees, so they want to predict whether an employee will leave the company, and discover the reasons behind their departure. I'm building several categorisation models in order to address this business need.
+A company's senior leadership team is concerned about high rate of turnover among their employees, so they want to predict whether an employee will leave the company, and discover the reasons behind their departure. I'm building several categorization models in order to address this business need.
 
 <br clear="left">
 
