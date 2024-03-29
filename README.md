@@ -1,8 +1,8 @@
 ## Data Science Portfolio
 ### Anastasia Vyunova
-* **email**: anastasia.vyu@gmail.com
-* **Telegram** @anastasia_vyu
-* **LinkedIn**: [linkedin.com/anastasia-vyunova](https://www.linkedin.com/in/anastasia-vyunova-7bb8aa234/)
+* **email:** anastasia.vyu@gmail.com
+* **Telegram:** [t.me/anastasia_vyu](https://t.me/anastasia_vyu)
+* **LinkedIn:** [linkedin.com/anastasia-vyunova](https://www.linkedin.com/in/anastasia-vyunova-7bb8aa234/)
 
 
 
