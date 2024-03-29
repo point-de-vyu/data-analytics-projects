@@ -1,21 +1,32 @@
 ## Data Science Portfolio
 ### Anastasia Vyunova
-* **email**: anastasia.vyu@gmail.com
-* **LinkedIn**: [linkedin.com/anastasia-vyunova](https://www.linkedin.com/in/anastasia-vyunova-7bb8aa234/)
+* **email:** anastasia.vyu@gmail.com
+* **Telegram:** [t.me/anastasia_vyu](https://t.me/anastasia_vyu)
+* **LinkedIn:** [linkedin.com/anastasia-vyunova](https://www.linkedin.com/in/anastasia-vyunova-7bb8aa234/)
 
 
-----
 
-### [Predicting employee quit factors](https://github.com/point-de-vyu/data-analytics-projects/tree/main/Predicting_employee_quit_factors)
-
-A company's senior leadership team is concerned about high rate of turnover among their employees, so they want to predict whether an employee will leave the company, and discover the reasons behind their departure. I'm building several categorisation models in order to address this business need.
-
+### Projects
 
 ---
 
-### [Waze: predicting user churn](https://github.com/point-de-vyu/data-analytics-projects/tree/main/Waze_predicting_user_churn)
+<img align="left" src="Predicting_employee_quit_factors/illustrations/cover_quit.png" style="width:200px;"/>
+
+### [Predicting employee quit factors](https://github.com/point-de-vyu/data-analytics-projects/tree/main/Predicting_employee_quit_factors)
+
+A company's senior leadership team is concerned about high rate of turnover among their employees, so they want to predict whether an employee will leave the company, and discover the reasons behind their departure. I'm building several categorization models in order to address this business need.
+
+<br clear="left">
+
+---
+
+<img align="left" src="Waze_predicting_user_churn/illustrations/cover_waze_3.png" style="width:200px;"/>
+
+### [Predicting user churn](https://github.com/point-de-vyu/data-analytics-projects/tree/main/Waze_predicting_user_churn)
 
 Using EDA practices and categorization models to understand who the users who churn are, when and why they do it, for the mobile navigation app Waze. 
+
+<br clear="left">
 
 ---
 <details>
