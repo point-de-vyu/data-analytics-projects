@@ -20,7 +20,7 @@ A company's senior leadership team is concerned about high rate of turnover amon
 
 ---
 
-<img align="left" src="Waze_predicting_user_churn/illustrations/cover_waze_3.png" style="width:200px;"/>
+<img align="left" src="Waze_predicting_user_churn/illustrations/cover_waze_0.png" style="width:200px;"/>
 
 ### [Predicting user churn](https://github.com/point-de-vyu/data-analytics-projects/tree/main/Waze_predicting_user_churn)
 
